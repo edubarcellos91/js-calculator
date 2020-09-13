@@ -323,7 +323,11 @@ function trig_replace() {
 		n3 = angle(n2);
 		t = trig_return(i);
 		regex = new RegExp(t + "\\(" + n2 + "\\)","g");
-		change(regex,trig_calc(t,n3));
+		if (document.calc.view.value.indexOf(t[0]) == "0") {
+			change(regex,trig_calc(t,n3));
+		} else {
+			change(regex,"*" + "(" + trig_calc(t,n3));
+		}
 	}
 }
 function result() {
