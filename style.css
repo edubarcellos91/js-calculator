@@ -475,11 +475,11 @@ form {
 label {
 	width: 40.79px;
 	height: 38px;
-	top: -2px !important;
+	top: -1px !important;
 }
 
 label p {
-	margin: 10px 0;
+	margin: 11px 0;
 }
 
 .result {
@@ -532,11 +532,11 @@ form {
 label {
 	width: 37.12px;
 	height: 34px;
-	top: 1px !important;
+	top: 0 !important;
 }
 
 label p {
-	margin: 10px 0;
+	margin: 9.5px 0;
 }
 
 .result {
