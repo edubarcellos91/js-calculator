@@ -45,11 +45,14 @@ function del() {
 function clean() {
 	document.calc.view.value = "0";
 }
-function exp() {
-	if (document.calc.view.value == "0" || (isNaN(document.calc.view.value[document.calc.view.value.length - 1]) && document.calc.view.value[document.calc.view.value.length - 1] != ")")) {
-		return;
-	} else {
-		document.calc.view.value += "E";
+function change(x,y) {
+	document.calc.view.value = document.calc.view.value.replace(x,y);
+}
+function dot_complete() {
+	for (var i = 0; i < indexes.length; i++) {
+		if (isNaN(document.calc.view.value[indexes[i] - 1])) {
+			document.calc.view.value = document.calc.view.value.slice(0,indexes[i]) + "0" + document.calc.view.value.slice(indexes[i]);
+		}
 	}
 }
 function last_numbers() {
@@ -96,13 +99,6 @@ function minus_plus() {
 		minus_plus_aux();
 	}
 }
-function dot_complete() {
-	for (var i = 0; i < indexes.length; i++) {
-		if (isNaN(document.calc.view.value[indexes[i] - 1])) {
-			document.calc.view.value = document.calc.view.value.slice(0,indexes[i]) + "0" + document.calc.view.value.slice(indexes[i]);
-		}
-	}
-}
 function root_view() {
 	if (document.calc.view.value == "0") {
 		document.calc.view.value = "(2)√(";
@@ -124,6 +120,18 @@ function root_n() {
 		document.calc.view.value = "( " + "√(";
 	} else {
 		document.calc.view.value += document.calc.view.value + "( " + "√(";
+	}
+}
+function exp() {
+	if (document.calc.view.value == "0" || (isNaN(document.calc.view.value[document.calc.view.value.length - 1]) && document.calc.view.value[document.calc.view.value.length - 1] != ")")) {
+		return;
+	} else {
+		document.calc.view.value += "E";
+	}
+}
+function e_pi(x) {
+	if (!isNaN(document.calc.view.value[document.calc.view.value.indexOf(x) - 1])) {
+		document.calc.view.value = document.calc.view.value.slice(0,document.calc.view.value.indexOf(x)) + "*" + document.calc.view.value.slice(document.calc.view.value.indexOf(x));
 	}
 }
 function ex() {
@@ -224,14 +232,6 @@ function parentheses_complete() {
 			dif++;
 		}
 	}
-}
-function e_pi(x) {
-	if (!isNaN(document.calc.view.value[document.calc.view.value.indexOf(x) - 1])) {
-		document.calc.view.value = document.calc.view.value.slice(0,document.calc.view.value.indexOf(x)) + "*" + document.calc.view.value.slice(document.calc.view.value.indexOf(x));
-	}
-}
-function change(x,y) {
-	document.calc.view.value = document.calc.view.value.replace(x,y);
 }
 function angle(a) {
 	if (document.getElementById('degree_rad').checked) {/*radians*/
