@@ -1,6 +1,6 @@
 # JS Calculator
 
-<img src="calculator.jpg" width="80%" />
+<img src="calculator.jpg" width="90%" />
 
 A calculator made with HTML, CSS and JavaScript with various functions.
 
