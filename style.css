@@ -1,0 +1,553 @@
+/*General*/
+html {
+	overflow-x: hidden;
+	scroll-behavior: smooth;
+}
+
+body {
+	position: absolute;
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-attachment: fixed;
+	vertical-align: baseline;
+	background-color: #0b040e;
+	overflow-x: hidden;
+	width: 100%;
+	height: 100%;
+}
+
+main {
+	position: relative;
+	border: 2px solid lightgrey;
+	border-radius: 20px;
+	margin: 0 auto;
+	background-color: #2a323c;
+}
+
+form {
+	position: relative;
+	margin: 0 auto;
+}
+
+#view {
+	position: relative;
+	display: block;
+	margin: 0 auto 20px auto;
+	text-align: right;
+	color: #424242;
+	border: 2px solid lightgrey;
+	border-radius: 10px;
+}
+
+.line {
+	position: relative;
+	display: block;
+	margin: 5px auto 0 auto;
+}
+
+.line input, label {
+	text-align: center;
+	font-family: Arial;
+	color: white;
+	outline: none;
+	border: 1px solid #4a5869;
+	background-color: #3b4654;
+	border-radius: 5px;
+}
+
+.line input {
+	display: inline-block;
+}
+
+.line input:active {
+	background-color: white;
+	color: #666;
+}
+
+input[type="checkbox"]{
+	display: none !important;
+}
+
+label {
+	top: 1px;
+}
+
+label p {
+	font-family: Arial;
+}
+
+input[type="checkbox"]:checked ~ #deg {
+	display: none !important;
+}
+
+input[type="checkbox"]:checked ~ #rad {
+	display: inline-block !important;
+}
+
+.num {
+	background-color: #5d6e83 !important;
+}
+
+.fund_oper {
+	background-color: #00a2cc !important;
+}
+
+#deg {
+	position: relative;
+	display: inline-block;
+	background-color: #742e75 !important;
+}
+
+#rad {
+	position: relative;
+	display: none;
+	background-color: #0c9744 !important;
+}
+
+.del {
+	padding-left: 5px;
+}
+
+.clean {
+	background-color: #e71837 !important;
+}
+
+.result {
+	background-color: #ff8c00 !important;
+}
+
+.clean:active, .result:active {
+	background-color: white !important;
+}
+
+.text {
+	position: relative;
+	display: block;
+	width: 100%;
+}
+
+.text p, .text a {
+	display: block;
+	color: rgb(170, 170, 170);
+	text-decoration: none;
+	text-align: center;
+}
+
+.text p {
+	margin: 0 0 6px 0;
+}
+
+.text p a {
+	display: inline-block;
+}
+
+.text a:hover {
+	color: white;
+	text-shadow: 0 0 5px #a5a12f;
+}
+
+/*Specific screens*/
+@media screen and (orientation:landscape) and (min-device-height:1079px)
+and (min-aspect-ratio:16/9) and (min-width:1583px) {/*1080p+*/
+main {
+	width: 500px;
+	height: 553px;
+	top: 150px;
+}
+
+form {
+	width: 450px;
+	height: 460px;
+	top: 50px;
+}
+
+#view {
+	width: 420px;
+	height: 60px;
+	top: 10px;
+	font-size: 35px;
+}
+
+.line {
+	width: 416.36px;
+}
+
+.line input, label {
+	font-size: 20px;
+	margin: 0 3.041px;
+}
+
+.line input {
+	width: 60px;
+	height: 40px;
+}
+
+label {
+	width: 58px;
+	height: 38px;
+}
+
+label p {
+	margin: 8px 0;
+}
+
+.result {
+	width: 130px !important;
+}
+
+.text {
+	margin: 115px 0 0 0;
+}
+
+.text p, .text a {
+	font-size: 16px;
+}
+}
+@media screen and (orientation:landscape) and (min-width: 1340px)
+and (max-width: 1582px) {/*1368p*/
+main {
+	width: 416.67px;
+	height: 445px;
+	top: 60px;
+}
+
+form {
+	width: 375px;
+	height: 423px;
+	top: 30px;
+}
+
+#view {
+	width: 350px;
+	height: 50px;
+	top: 8px;
+	font-size: 35px;
+}
+
+.line {
+	width: 355.9px;
+}
+
+.line input, label {
+	font-size: 15px;
+	margin: 0 2.5px;
+}
+
+.line input {
+	width: 50px;
+	height: 33.33px;
+}
+
+label {
+	width: 48px;
+	height: 31.33px;
+}
+
+label p {
+	margin: 8px 0;
+}
+
+.result {
+	width: 110.24px !important;
+}
+
+.text {
+	margin: 60px 0 0 0;
+}
+
+.text p, .text a {
+	font-size: 14px;
+}
+}
+@media screen and (orientation:landscape) and (min-width: 1060px)
+and (max-width: 1339px) {/*1280p*/
+main {
+	width: 333.33px;
+	height: 368.67px;
+	top: 80px;
+}
+
+form {
+	width: 300px;
+	height: 320px;
+	top: 33.33px;
+}
+
+#view {
+	width: 280px;
+	height: 40px;
+	top: 10px;
+	font-size: 35px;
+}
+
+.line {
+	width: 290.48px;
+}
+
+.line input, label {
+	font-size: 12px;
+	margin: 0 2.03px;
+}
+
+.line input {
+	width: 40px;
+	height: 26.67px;
+}
+
+label {
+	width: 38.67px;
+	height: 25.33px;
+	top: -1px !important;
+}
+
+label p {
+	margin: 5px 0;
+}
+
+.result {
+	width: 89.82px !important;
+}
+
+.text {
+	margin: 70px 0 0 0;
+}
+
+.text p, .text a {
+	font-size: 13px;
+}
+}
+@media screen and (orientation:landscape) and (max-width: 1059px)
+and (max-height: 799px){/*Tablet landscape*/
+main {
+	width: 333.33px;
+	height: 368.67px;
+	top: 30px;
+}
+
+form {
+	width: 300px;
+	height: 320px;
+	top: 33.33px;
+}
+
+#view {
+	width: 280px;
+	height: 40px;
+	top: 10px;
+	font-size: 35px;
+}
+
+.line {
+	width: 290.48px;
+}
+
+.line input, label {
+	font-size: 12px;
+	margin: 0 2.03px;
+}
+
+.line input {
+	width: 40px;
+	height: 26.67px;
+}
+
+label {
+	width: 38.67px;
+	height: 25.33px;
+	top: -1px !important;
+}
+
+label p {
+	margin: 5px 0;
+}
+
+.result {
+	width: 89.82px !important;
+}
+
+.text {
+	margin: 60px 0 0 0;
+}
+
+.text p, .text a {
+	font-size: 12px;
+}
+}
+@media screen and (orientation:portrait) and (min-width: 600px){ /*Tablet portrait*/
+main {
+	width: 600px;
+	height: 650px;
+	top: 100px;
+}
+
+form {
+	width: 585px;
+	height: 624px;
+	top: 43px;
+}
+
+#view {
+	width: 546px;
+	height: 78px;
+	top: 10px;
+	font-size: 50px;
+}
+
+.line {
+	width: 541.1px;
+}
+
+.line input, label {
+	font-size: 25px;
+	margin: 0 3.96px;
+}
+
+.line input {
+	width: 78px;
+	height: 52px;
+}
+
+label {
+	width: 76px;
+	height: 50px;
+	top: -1px !important;
+}
+
+label p {
+	margin: 10px 0;
+}
+
+.result {
+	width: 169.1px !important;
+}
+
+.text {
+	margin: 60px 0 0 0;
+}
+
+.text p, .text a {
+	font-size: 15px;
+}
+}
+@media screen and (orientation:portrait) and (max-width: 599px),
+screen and (max-width: 599px) {/*Default mobile*/
+main {
+	width: 340px;
+	height: 470px;
+	top: 18px;
+}
+
+form {
+	width: 341.25px;
+	height: 480px;
+	top: 15px;
+}
+
+#view {
+	width: 310px;
+	height: 50px;
+	top: 5px;
+	font-size: 39px;
+}
+
+.line {
+	width: 310px;
+}
+
+.line input, label {
+	font-size: 13px;
+	margin: 0 2.31px;
+}
+
+.line input {
+	width: 42.79px;
+	height: 40px;
+}
+
+label {
+	width: 40.79px;
+	height: 38px;
+	top: -2px !important;
+}
+
+label p {
+	margin: 10px 0;
+}
+
+.result {
+	width: 95.37px !important;
+}
+
+.text {
+	margin: 10px 0;
+}
+
+.text p, .text a {
+	font-size: 15px;
+}
+}
+@media screen and (orientation:portrait) and (max-width: 359px),
+screen and (max-width: 359px){/*Old mobiles*/
+main {
+	width: 310px;
+	height: 420px;
+	top: 10px;
+}
+
+form {
+	width: 290px;
+	height: 420px;
+	top: 10px;
+}
+
+#view {
+	width: 280px;
+	height: 45px;
+	top: 5px;
+	font-size: 35px;
+}
+
+.line {
+	width: 280px;
+}
+
+.line input, label {
+	font-size: 13px;
+	margin: 0 1.65px;
+}
+
+.line input {
+	width: 39.12px;
+	height: 36px;
+}
+
+label {
+	width: 37.12px;
+	height: 34px;
+	top: 1px !important;
+}
+
+label p {
+	margin: 10px 0;
+}
+
+.result {
+	width: 86.7px !important;
+}
+
+.text {
+	margin: 17px 0;
+}
+
+.text p, .text a {
+	font-size: 15px;
+}
+}
