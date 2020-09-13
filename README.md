@@ -8,4 +8,4 @@ A calculator made with HTML, CSS and JavaScript with various functions.
 
 Try it here
 ---
-[Demo](https://edubarcellos91.github.io/js-calculator/)
+# [Demo](https://edubarcellos91.github.io/js-calculator/)
