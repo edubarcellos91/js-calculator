@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+	<meta name="robots" content="index, follow" />
+	<meta name="author" content="Eduardo Nunes Barcellos" />
+	<meta name="description" content="Calculator made with html, css and javascript" />
+	<meta name="keywords" content="calculadora, calculator, online" />
+	<link rel="shortcut icon" href="favicon.ico" />
+	<title>JS Calculator</title>
+	<link rel="stylesheet" media="screen" href="style.css" />
+	<script src="calc.js"></script>
+</head>
+<body>
+	<main>
+		<form name="calc">
+			<input type="text" name="view" id="view" value="0">
+			<section class="line">
+				<input type="button" name="(" value="(" onclick="button1(value)" />
+				<input type="button" name=")" value=")" onclick="button1(value)" />
+				<input type="button" name="EXP" value="EXP" onclick="exp()" />
+				<input type="checkbox" name="degree_rad" id="degree_rad" />
+				<label for="degree_rad" id="deg"><p>Deg</p></label>
+				<label for="degree_rad" id="rad"><p>Rad</p></label>
+				<input type="button" name="Del" value="Del" onclick="del()" class="del" />
+				<input type="button" name="C" value="C" onclick="clean()" class="clean" />
+			</section>
+			<section class="line">
+				<input type="button" name="sin" value="sin" onclick="button1('sin(')" />
+				<input type="button" name="cos" value="cos" onclick="button1('cos(')" />
+				<input type="button" name="tan" value="tan" onclick="button1('tan(')" />
+				<input type="button" name="sec" value="sec" onclick="button1('sec(')" />
+				<input type="button" name="csc" value="csc" onclick="button1('csc(')" />
+				<input type="button" name="cot" value="cot" onclick="button1('cot(')" />
+			</section>
+			<section class="line">
+				<input type="button" name="sin⁻¹" value="sin⁻¹" onclick="button1('arcsin(')" />
+				<input type="button" name="cos⁻¹" value="cos⁻¹" onclick="button1('arccos(')" />
+				<input type="button" name="tan⁻¹" value="tan⁻¹" onclick="button1('arctan(')" />
+				<input type="button" name="sec⁻¹" value="sec⁻¹" onclick="button1('arcsec(')" />
+				<input type="button" name="csc⁻¹" value="csc⁻¹" onclick="button1('arccsc(')" />
+				<input type="button" name="cot⁻¹" value="cot⁻¹" onclick="button1('arccot(')" />
+			</section>
+			<section class="line">
+				<input type="button" name="π" value="π" onclick="button1(value)" />
+				<input type="button" name="e" value="e" onclick="button1(value)" />
+				<input type="button" name="x!" value="x!" onclick="button2('!')" />
+				<input type="button" name="±" value="±" onclick="minus_plus()" />
+				<input type="button" name="x²" value="x²" onclick="button2('^(2)')" />
+				<input type="button" name="√" value="√" onclick="root_view(value)" />
+			</section>
+			<section class="line">
+				<input type="button" name="7" value="7" onclick="button1(value)" class="num" />
+				<input type="button" name="8" value="8" onclick="button1(value)" class="num" />
+				<input type="button" name="9" value="9" onclick="button1(value)" class="num" />
+				<input type="button" name="÷" value="÷" onclick="button1(value)" class="fund_oper" />
+				<input type="button" name="xʸ" value="xʸ" onclick="button2('^(')" />
+				<input type="button" name="ʸ√" value="ʸ√" onclick="root_n()" />
+			</section>
+			<section class="line">
+				<input type="button" name="4" value="4" onclick="button1(value)" class="num" />
+				<input type="button" name="5" value="5" onclick="button1(value)" class="num" />
+				<input type="button" name="6" value="6" onclick="button1(value)" class="num" />
+				<input type="button" name="x" value="x" onclick="button1(value)" class="fund_oper" />
+				<input type="button" name="log" value="log" onclick="logarithm(value)" />
+				<input type="button" name="10ˣ" value="10ˣ" onclick="button2('x10^(')" />
+			</section>
+			<section class="line">
+				<input type="button" name="1" value="1" onclick="button1(value)" class="num" />
+				<input type="button" name="2" value="2" onclick="button1(value)" class="num" />
+				<input type="button" name="3" value="3" onclick="button1(value)" class="num" />
+				<input type="button" name="-" value="-" onclick="button1(value)" class="fund_oper" />
+				<input type="button" name="ln" value="ln" onclick="logarithm(value)" />
+				<input type="button" name="eˣ" value="eˣ" onclick="ex()" />
+			</section>
+			<section class="line">
+				<input type="button" name="0" value="0" onclick="button1(value)" class="num" />
+				<input type="button" name="." value="." onclick="button1(value)" class="num" />
+				<input type="button" name="%" value="%" onclick="button1(value)" />
+				<input type="button" name="+" value="+" onclick="button1(value)" class="fund_oper" />
+				<input type="button" name="=" value="=" onclick="result()" class="result" />
+			</section>
+		</form>
+		<section class="text">
+			<p>Developed by <a href="https://github.com/edubarcellos91">Eduardo Nunes Barcellos</a></p>
+			<p><a href="https://github.com/edubarcellos91/js-calculator">Source code</a></p>
+		</section>
+	</main>
+</body>
+</html>
