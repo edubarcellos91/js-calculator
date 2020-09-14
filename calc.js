@@ -145,7 +145,7 @@ function ex() {
 	}
 }
 function factorialize(x) {
-	if (x == 0) {
+	if (x == "0") {
 		return 1;
 	} else {
 		return x * factorialize(x-1);
@@ -159,8 +159,8 @@ function factorialize_calc() {
 			f = document.calc.view.value[i-j] + f;
 			j++;
 		}
-		x = factorialize(f-1);
-		document.calc.view.value = document.calc.view.value.slice(0,i)
+		x = factorialize(f);
+		document.calc.view.value = document.calc.view.value.slice(0,i-j+1)
 		+ "(" + x + ")" + document.calc.view.value.slice(i + 1);
 	}
 }
